@@ -1,0 +1,72 @@
+﻿@model PokeJuego.Models.C_tbPokemon
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>C_tbPokemon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.strNombrePokemon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strNombrePokemon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strImagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strImagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tnyVida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tnyVida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbAtaques.strNombreAtaque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbAtaques.strNombreAtaque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbTipoPokemon.strTipoPokemon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbTipoPokemon.strTipoPokemon)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

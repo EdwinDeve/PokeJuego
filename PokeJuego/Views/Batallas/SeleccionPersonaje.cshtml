@@ -1,0 +1,74 @@
+﻿@model PokeJuego.Models.C_tbPokemon
+
+@{
+    ViewBag.Title = "Seleccion de personaje";
+
+}
+
+<link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
+
+
+<div class="container" style="font-size:20px">
+
+    <h1>Haz seleccionado a @Html.DisplayFor(model => model.strNombrePokemon)</h1>
+
+    <div class="col-md-3">
+        <img src="@Html.DisplayFor(model => model.strImagen)" alt="Imagen del Pokemon" width="150" height="150" />
+
+    </div>
+
+    <div class="col-md-4 Bordes-Sombreados-1">
+        <label>
+            Nombre del Pokemon:
+        </label>
+        @Html.DisplayFor(model => model.strNombrePokemon)
+    </div>
+    <br />
+    <br />
+    <div class="col-md-4 Bordes-Sombreados-1">
+        <label>
+            PV del Pokemon:
+        </label>
+        @Html.DisplayFor(model => model.tnyVida)
+    </div>
+
+    <div class="col-md-4 Bordes-Sombreados-1">
+        <label>
+            Tipo de pokemon:
+        </label>
+        @Html.DisplayFor(model => model.C_tbTipoPokemon.strTipoPokemon)
+    </div>
+
+    <div class="col-md-4 Bordes-Sombreados-1">
+        <label>
+            Ataque basico:
+        </label>
+        @Html.DisplayFor(model => model.C_tbAtaques.strNombreAtaque)
+    </div>
+
+    <div class="col-md-4 Bordes-Sombreados-1">
+        <label>
+            Ataque especial:
+        </label>
+        @Html.DisplayFor(model => model.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+    </div>
+
+    <a href="@Url.Action("SeleccionarContrincante", "Batallas", new {MiPokemon = Model.intPokemon})">
+        <div class="col-md-4 Bordes-Sombreados-1 bg-warning" style="width: 120px">
+            <label>
+               continuar
+            </label>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Index", "Pokemon")">
+        <div class="col-md-4 Bordes-Sombreados-1 bg-warning" style="width: 240px">
+            <label>
+                &lt;&lt;
+                Volver a la Poquedex
+            </label>
+        </div>
+    </a>
+
+</div>
+

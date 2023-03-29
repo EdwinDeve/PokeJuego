@@ -1,0 +1,55 @@
+﻿@model PokeJuego.Models.C_tbPokemon
+
+@{
+    ViewBag.Title = "Resumen";
+}
+<link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
+
+<div class="container text-center"><h2>Resumen</h2></div>
+
+<div class="container text-center" style="font-size: 40px; margin-left:20%">
+
+    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-success" style="width:20%">
+
+        <img src="@ViewBag.ImagenMiPokemon" alt="Imagen del Pokemon" width="150" height="150" />
+        <br />
+        @ViewBag.MiPokemon
+
+    </div>
+    
+
+    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+        <label>
+            VS
+        </label>
+    </div>
+
+
+    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-danger" style="width:20%">
+
+        <img src="@ViewBag.ImagenContrincante" alt="Imagen del Pokemon" width="150" height="150" />
+        <br />
+        @ViewBag.Contrincante
+
+    </div>
+
+</div>
+<br />
+<hr />
+<div class="container text-center TEXT" style="font-size: 20px; margin-left:30%">
+    <a href="#" style="color:black">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+            <label>
+                Combatir
+            </label>
+        </div>
+    </a>
+
+    <a href="@Url.Action("Index", "Home")" style="color:black">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+            <label>
+                Cancelar combate
+            </label>
+        </div>  
+    </a>
+</div>

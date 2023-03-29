@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbPokemonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="_tbAtaqueEspecial">
+    <Key>
+      <PropertyRef Name="intAtaqueEsp" />
+    </Key>
+    <Property Name="intAtaqueEsp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strNombreAtaqueEsp" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="intDañoEsp" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_tbAtaques">
+    <Key>
+      <PropertyRef Name="intAtaque" />
+    </Key>
+    <Property Name="intAtaque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strNombreAtaque" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="intDaño" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_tbPokemon">
+    <Key>
+      <PropertyRef Name="intPokemon" />
+    </Key>
+    <Property Name="intPokemon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strNombrePokemon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="strImagen" Type="varchar(max)" />
+    <Property Name="tnyVida" Type="tinyint" Nullable="false" />
+    <Property Name="intTipoPokemon" Type="int" Nullable="false" />
+    <Property Name="intAtaque" Type="int" Nullable="false" />
+    <Property Name="intAtaqueEsp" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_tbTipoPokemon">
+    <Key>
+      <PropertyRef Name="intTipoPokemon" />
+    </Key>
+    <Property Name="intTipoPokemon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strTipoPokemon" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK___tbPokemo__intAt__4CA06362">
+    <End Role="_tbAtaques" Type="Self._tbAtaques" Multiplicity="1" />
+    <End Role="_tbPokemon" Type="Self._tbPokemon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_tbAtaques">
+        <PropertyRef Name="intAtaque" />
+      </Principal>
+      <Dependent Role="_tbPokemon">
+        <PropertyRef Name="intAtaque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___tbPokemo__intAt__4D94879B">
+    <End Role="_tbAtaqueEspecial" Type="Self._tbAtaqueEspecial" Multiplicity="1" />
+    <End Role="_tbPokemon" Type="Self._tbPokemon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_tbAtaqueEspecial">
+        <PropertyRef Name="intAtaqueEsp" />
+      </Principal>
+      <Dependent Role="_tbPokemon">
+        <PropertyRef Name="intAtaqueEsp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___tbPokemo__intTi__4BAC3F29">
+    <End Role="_tbTipoPokemon" Type="Self._tbTipoPokemon" Multiplicity="1" />
+    <End Role="_tbPokemon" Type="Self._tbPokemon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_tbTipoPokemon">
+        <PropertyRef Name="intTipoPokemon" />
+      </Principal>
+      <Dependent Role="_tbPokemon">
+        <PropertyRef Name="intTipoPokemon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbPokemonModelStoreContainer">
+    <EntitySet Name="_tbAtaqueEspecial" EntityType="Self._tbAtaqueEspecial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_tbAtaques" EntityType="Self._tbAtaques" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_tbPokemon" EntityType="Self._tbPokemon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_tbTipoPokemon" EntityType="Self._tbTipoPokemon" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK___tbPokemo__intAt__4CA06362" Association="Self.FK___tbPokemo__intAt__4CA06362">
+      <End Role="_tbAtaques" EntitySet="_tbAtaques" />
+      <End Role="_tbPokemon" EntitySet="_tbPokemon" />
+    </AssociationSet>
+    <AssociationSet Name="FK___tbPokemo__intAt__4D94879B" Association="Self.FK___tbPokemo__intAt__4D94879B">
+      <End Role="_tbAtaqueEspecial" EntitySet="_tbAtaqueEspecial" />
+      <End Role="_tbPokemon" EntitySet="_tbPokemon" />
+    </AssociationSet>
+    <AssociationSet Name="FK___tbPokemo__intTi__4BAC3F29" Association="Self.FK___tbPokemo__intTi__4BAC3F29">
+      <End Role="_tbTipoPokemon" EntitySet="_tbTipoPokemon" />
+      <End Role="_tbPokemon" EntitySet="_tbPokemon" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

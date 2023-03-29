@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PokeJuego.Models.C_tbAtaques>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>PokeJuego</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>
+                Nombre del ataque
+            </label>
+        </th>
+        <th>
+            <label>
+                Puntos de daño
+            </label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.strNombreAtaque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intDaño)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.intAtaque }) |
+            @Html.ActionLink("Details", "Details", new { id=item.intAtaque }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.intAtaque })
+        </td>
+    </tr>
+}
+
+</table>

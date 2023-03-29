@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbPokemonModelStoreContainer" CdmEntityContainer="dbPokemonEntities">
+    <EntitySetMapping Name="C_tbAtaqueEspecial">
+      <EntityTypeMapping TypeName="dbPokemonModel.C_tbAtaqueEspecial">
+        <MappingFragment StoreEntitySet="_tbAtaqueEspecial">
+          <ScalarProperty Name="intAtaqueEsp" ColumnName="intAtaqueEsp" />
+          <ScalarProperty Name="strNombreAtaqueEsp" ColumnName="strNombreAtaqueEsp" />
+          <ScalarProperty Name="intDañoEsp" ColumnName="intDañoEsp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_tbAtaques">
+      <EntityTypeMapping TypeName="dbPokemonModel.C_tbAtaques">
+        <MappingFragment StoreEntitySet="_tbAtaques">
+          <ScalarProperty Name="intAtaque" ColumnName="intAtaque" />
+          <ScalarProperty Name="strNombreAtaque" ColumnName="strNombreAtaque" />
+          <ScalarProperty Name="intDaño" ColumnName="intDaño" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_tbPokemon">
+      <EntityTypeMapping TypeName="dbPokemonModel.C_tbPokemon">
+        <MappingFragment StoreEntitySet="_tbPokemon">
+          <ScalarProperty Name="intPokemon" ColumnName="intPokemon" />
+          <ScalarProperty Name="strNombrePokemon" ColumnName="strNombrePokemon" />
+          <ScalarProperty Name="strImagen" ColumnName="strImagen" />
+          <ScalarProperty Name="tnyVida" ColumnName="tnyVida" />
+          <ScalarProperty Name="intTipoPokemon" ColumnName="intTipoPokemon" />
+          <ScalarProperty Name="intAtaque" ColumnName="intAtaque" />
+          <ScalarProperty Name="intAtaqueEsp" ColumnName="intAtaqueEsp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_tbTipoPokemon">
+      <EntityTypeMapping TypeName="dbPokemonModel.C_tbTipoPokemon">
+        <MappingFragment StoreEntitySet="_tbTipoPokemon">
+          <ScalarProperty Name="intTipoPokemon" ColumnName="intTipoPokemon" />
+          <ScalarProperty Name="strTipoPokemon" ColumnName="strTipoPokemon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

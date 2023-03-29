@@ -1,0 +1,28 @@
+﻿@model PokeJuego.Models.C_tbTipoPokemon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div>
+    <h1>PokeJuego</h1>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>
+                Tipo del pokemon
+            </label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strTipoPokemon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.intTipoPokemon }) |
+    @Html.ActionLink("Regresar al inicio", "Index")
+</p>

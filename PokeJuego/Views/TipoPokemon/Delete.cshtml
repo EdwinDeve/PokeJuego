@@ -1,0 +1,34 @@
+﻿@model PokeJuego.Models.C_tbTipoPokemon
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<h3>Esta seguro que quiere eliminar el PokeTipo @Html.DisplayFor(model => model.strTipoPokemon)?</h3>
+<div>
+    <h4>PokeJuego</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>
+                Tipo del pokemon
+            </label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strTipoPokemon)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar al inicio", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,66 @@
+﻿@model PokeJuego.Models.C_tbPokemon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>C_tbPokemon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.strNombrePokemon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strNombrePokemon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.strImagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.strImagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tnyVida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tnyVida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbAtaques.strNombreAtaque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbAtaques.strNombreAtaque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_tbTipoPokemon.strTipoPokemon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_tbTipoPokemon.strTipoPokemon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.intPokemon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

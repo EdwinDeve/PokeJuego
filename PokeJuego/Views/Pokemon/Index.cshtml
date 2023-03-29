@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PokeJuego.Models.C_tbPokemon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
+
+<div class="container text-center">
+    <label style="font-size:40px">
+        Pokedex
+    </label>
+
+</div>
+<br />
+
+<div class="container text-center">
+    <a href="@Url.Action("Create", "Pokemon")">
+        <img src="~/Assets/Images/add.png" width="40" height="40" class="Sombra" style="border-radius:40px" />
+    </a>
+</div>
+
+
+<div class="container text-center">
+    <label style="font-size:40px">
+        Selecciona tu Pokemon
+    </label>
+
+</div>
+
+<br />
+<div class="container text-center">
+
+
+    @foreach (var item in Model)
+    {
+        var linkImagen = item.strImagen;
+        <a href="@Url.Action("SeleccionPersonaje", "Batallas", new { idPokemon = item.intPokemon})">
+
+            <div class="col-sm-2 Bordes-Sombreados-1  " style="margin-left: 90px; margin-right: 90px; margin-bottom: 20px;">
+                <img src="@linkImagen" alt="Imagen del Pokemon" width="150" height="150" />
+                <br />
+                <label style="font-size: 20px">
+                    @Html.DisplayFor(modelItem => item.strNombrePokemon)
+                </label>
+            </div>
+
+        </a>
+
+    }
+
+</div>
