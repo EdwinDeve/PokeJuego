@@ -1,15 +1,19 @@
-﻿@model PokeJuego.Models.C_tbPokemon
-
-@{
+﻿@{
     ViewBag.Title = "Resumen";
 }
 <link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
 
-<div class="container text-center"><h2>Resumen</h2></div>
+<div class="container text-center" style="font-size: 40px; margin-left:1%">
+
+        <h2>RESUMEN</h2>
+</div>
 
 <div class="container text-center" style="font-size: 40px; margin-left:20%">
 
-    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-success" style="width:20%">
+
+   
+    
+    <div class="col-md-4 Bordes-Sombreados-1 text-center" style="width:20%; " id="MiPokemon">
 
         <img src="@ViewBag.ImagenMiPokemon" alt="Imagen del Pokemon" width="150" height="150" />
         <br />
@@ -18,14 +22,14 @@
     </div>
     
 
-    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+    <div class="col-md-4 text-center " style="width:20%">
         <label>
             VS
         </label>
     </div>
 
 
-    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-danger" style="width:20%">
+    <div class="col-md-4 Bordes-Sombreados-1 text-center bg-danger" style="width:20%" id="Enemigo">
 
         <img src="@ViewBag.ImagenContrincante" alt="Imagen del Pokemon" width="150" height="150" />
         <br />
@@ -36,20 +40,45 @@
 </div>
 <br />
 <hr />
-<div class="container text-center TEXT" style="font-size: 20px; margin-left:30%">
-    <a href="#" style="color:black">
-        <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+<div class="container text-center " style="font-size: 20px; margin-left:30%">
+    <a onclick=" AnimacionSalida();" 
+       href="
+       @Url.Action("Batalla", "Batallas", new { 
+            Mipokemon = ViewBag.idPokemon, 
+            Contrincante =  ViewBag.idContrincante, 
+            turno = 0,
+            PS =  0,
+            PSEnemigo = 0,
+            accion = "Comenzar_Batalla",
+
+        })">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-success" style="width:20%">
             <label>
                 Combatir
             </label>
         </div>
     </a>
 
-    <a href="@Url.Action("Index", "Home")" style="color:black">
-        <div class="col-md-4 Bordes-Sombreados-1 text-center bg-info" style="width:20%">
+    <a href="@Url.Action("Index", "Home")" >
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-danger" style="width:20%;">
             <label>
                 Cancelar combate
             </label>
         </div>  
     </a>
 </div>
+
+<script type="text/javascript">
+
+    function AnimacionSalida() {
+
+        MiPokemon = document.getElementById("MiPokemon");
+        MiPokemon.classList.add("slide-out-fwd-center");
+
+        Enemy = document.getElementById("Enemigo");
+        Enemy.classList.add("slide-out-fwd-center");
+
+    }
+
+
+</script>

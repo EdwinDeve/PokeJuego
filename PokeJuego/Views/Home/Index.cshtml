@@ -4,7 +4,7 @@
 
 <link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
 
-<div class="container text-center Bordes-Sombreados-1" >
+<div class="container text-center Bordes-Sombreados-1">
 
     <div class="container">
         <h1>Poke Juego</h1>
@@ -18,8 +18,45 @@
     </div>
     <br />
     <div class="container">
-        <a href="@Url.Action("Index", "Pokemon")" class="btn btn-warning btn-lg">Jugar &raquo;</a>
+        <a href="@Url.Action("Index", "Pokemon")" class="btn btn-warning btn-lg ">Jugar &raquo;</a>
+
+
     </div>
     <br />
 
+    <!--<div class="container">
+        <button onclick="launchFullScreen(document.documentElement);" class="btn btn-info">
+            Jugar en pantalla completa
+        </button>-->
+        @*<button onclick="cancelFullScreen();" class="btn btn-info">
+            Salir de pantalla completa
+        </button>*@
+    <!--</div>
+    <br />-->
 </div>
+
+
+@*<script type="text/javascript">
+
+    function launchFullScreen(element) {
+        if (element.requestFullScreen) {
+            element.requestFullScreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        }
+    }
+    // Lanza en pantalla completa en navegadores que lo soporten
+    function cancelFullScreen() {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
+    }
+
+
+</script>*@

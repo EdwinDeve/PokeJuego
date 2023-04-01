@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PokeJuego.Models.C_tbPokemon>
+
+<p>
+    @Html.ActionLink("Añadir un nuevo pokemon", "Create")
+</p>
+<table class="table ">
+    <tr class="bg-primary">
+        <th>
+            @Html.DisplayName("Nombre")
+        </th>
+        <th>
+            @Html.DisplayName("Url de la animacion")
+        </th>
+        <th>
+            @Html.DisplayName("PS (Default 200)")
+        </th>
+        <th>
+            @Html.DisplayName("Ataque especial")
+        </th>
+        <th>
+            @Html.DisplayName("Ataque basico")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="bg-info">
+        <td>
+            @Html.DisplayFor(modelItem => item.strNombrePokemon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.strImagen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tnyVida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_tbAtaqueEspecial.strNombreAtaqueEsp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_tbAtaques.strNombreAtaque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_tbTipoPokemon.strTipoPokemon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.intPokemon }) |
+            @Html.ActionLink("Details", "Details", new { id=item.intPokemon }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.intPokemon })
+        </td>
+    </tr>
+}
+
+</table>

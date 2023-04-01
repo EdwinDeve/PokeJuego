@@ -8,8 +8,8 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-<table class="table table-striped">
-    <tr class="bg-success">
+<table class="table ">
+    <tr class="bg-primary">
         <th>
             <label>
                 Tipo de pokemon
@@ -19,12 +19,12 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="bg-info">
         <td>
             @Html.DisplayFor(modelItem => item.strTipoPokemon)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.intTipoPokemon }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.intTipoPokemon, }) |
             @Html.ActionLink("Details", "Details", new { id=item.intTipoPokemon }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.intTipoPokemon })
         </td>

@@ -21,6 +21,14 @@ namespace PokeJuego.Controllers
             return View(c_tbPokemon.ToList());
         }
 
+
+
+        public ActionResult ListaPokemones()
+        {
+            var c_tbPokemon = db.C_tbPokemon.Include(c => c.C_tbAtaqueEspecial).Include(c => c.C_tbAtaques).Include(c => c.C_tbTipoPokemon);
+            return View(c_tbPokemon.ToList());
+        }
+
         // GET: Pokemon/Details/5
         public ActionResult Details(int? id)
         {

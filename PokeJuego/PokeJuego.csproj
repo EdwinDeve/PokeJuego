@@ -170,11 +170,16 @@
   <ItemGroup>
     <Content Include="Assets\GIFS\Pik-Achooo.gif" />
     <Content Include="Assets\Images\add.png" />
+    <Content Include="Assets\Images\BackGroud_Image.jpg" />
+    <Content Include="Assets\Images\Body_Bg.png" />
+    <Content Include="Assets\Video\Woods_Background.mp4" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Custom_CSS\Animaciones.css" />
     <Content Include="Content\Custom_CSS\BasicStyles_Div.css" />
+    <Content Include="Content\Custom_CSS\Fondos.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -247,6 +252,10 @@
     <Content Include="Views\Batallas\SeleccionPersonaje.cshtml" />
     <Content Include="Views\Batallas\SeleccionarContrincante.cshtml" />
     <Content Include="Views\Batallas\Resumen.cshtml" />
+    <Content Include="Views\Batallas\Batalla.cshtml" />
+    <Content Include="Views\Batallas\Huir.cshtml" />
+    <Content Include="Views\Batallas\FinalPelea.cshtml" />
+    <Content Include="Views\Pokemon\ListaPokemones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

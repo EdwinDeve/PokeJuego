@@ -11,7 +11,8 @@ namespace PokeJuego.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class C_tbAtaques
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +23,10 @@ namespace PokeJuego.Models
     
         public int intAtaque { get; set; }
         public string strNombreAtaque { get; set; }
+
+        [Range(0, 70, ErrorMessage = "El daño total no puede superar los 70 puntos, tu sabes, solo por sio acaso")]
         public int intDaño { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C_tbPokemon> C_tbPokemon { get; set; }
     }

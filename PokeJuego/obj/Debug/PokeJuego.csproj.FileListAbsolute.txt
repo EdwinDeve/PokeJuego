@@ -51,6 +51,8 @@ C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\ro
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\roslyn\VBCSCompiler.exe
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\Antlr3.Runtime.dll
+C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.dll
+C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.SqlServer.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\Sy
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\System.Web.WebPages.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\System.Web.WebPages.Razor.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\WebGrease.dll
+C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.xml
+C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.SqlServer.xml
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\System.Web.Helpers.xml
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\System.Web.Mvc.xml
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\System.Web.Optimization.xml
@@ -84,7 +88,3 @@ C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\obj\De
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\obj\Debug\PokeJuego.csproj.CopyComplete
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\obj\Debug\PokeJuego.dll
 C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\obj\Debug\PokeJuego.pdb
-C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.dll
-C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.SqlServer.dll
-C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.xml
-C:\Users\Edwin\Desktop\CARPETAS\MVS Proyectos\Pokemon\PokeJuego\PokeJuego\bin\EntityFramework.SqlServer.xml

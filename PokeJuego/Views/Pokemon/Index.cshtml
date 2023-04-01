@@ -6,24 +6,25 @@
 
 <link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
 
+
+
 <div class="container text-center">
-    <label style="font-size:40px">
+    <label style="font-size:20px">
         Pokedex
     </label>
 
 </div>
-<br />
 
-<div class="container text-center">
+@*<div class="container text-center">
     <a href="@Url.Action("Create", "Pokemon")">
         <img src="~/Assets/Images/add.png" width="40" height="40" class="Sombra" style="border-radius:40px" />
     </a>
-</div>
+</div>*@
 
 
 <div class="container text-center">
-    <label style="font-size:40px">
-        Selecciona tu Pokemon
+    <label style="font-size:20px">
+        Selecciona un Pokemon para empezar el enfrentamiento
     </label>
 
 </div>
@@ -40,7 +41,7 @@
             <div class="col-sm-2 Bordes-Sombreados-1  " style="margin-left: 90px; margin-right: 90px; margin-bottom: 20px;">
                 <img src="@linkImagen" alt="Imagen del Pokemon" width="150" height="150" />
                 <br />
-                <label style="font-size: 20px">
+                <label style="font-size: 20px; color:black" >
                     @Html.DisplayFor(modelItem => item.strNombrePokemon)
                 </label>
             </div>

@@ -11,12 +11,18 @@ namespace PokeJuego.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class C_tbPokemon
     {
         public int intPokemon { get; set; }
         public string strNombrePokemon { get; set; }
+
+        [Required(ErrorMessage = "Se te recomienda encarecidamente que le agregues una imagen a tu pokemon")]
         public string strImagen { get; set; }
+
+
+        [Range(100, 200, ErrorMessage = "No diga mamadas compa, la vida de tu pokemon debe de estar entre 100 y 200 puntos")]
         public byte tnyVida { get; set; }
         public int intTipoPokemon { get; set; }
         public int intAtaque { get; set; }

@@ -8,8 +8,10 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="~/Content/Custom_CSS/Fondos.css" rel="stylesheet" />
 </head>
-<body style="font-family: 'VT323'">
+
+<body style="font-family: 'VT323'" class="ImagenDeFondo-1">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,17 +27,25 @@
                     <li>@Html.ActionLink("Tipos de pokemones", "Index", "TipoPokemon")</li>
                     <li>@Html.ActionLink("Ataques", "Index", "Ataques")</li>
                     <li>@Html.ActionLink("Ataques Especiales", "Index", "AtaqueEspecial")</li>
-                    <li>@Html.ActionLink("Pokemones", "Index", "Pokemon")</li>
+                    <li>@Html.ActionLink("Pokemones", "ListaPokemones", "Pokemon")</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+
+        @*<video muted autoplay loop class="videoFondo">
+            <source src="~/Assets/Video/Woods_Background.mp4" type="video/mp4" />
+        </video>*@
+
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
+
+        @RenderBody()
+
+        <hr />
+
+        
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -43,3 +53,5 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+

@@ -1,0 +1,35 @@
+﻿@model PokeJuego.Models.C_tbPokemon
+
+@{
+    ViewBag.Title = "Seleccion de personaje";
+
+}
+
+<link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
+<link href="~/Content/Custom_CSS/Animaciones.css" rel="stylesheet" />
+
+<div class="container text-center">
+    <h1>@Html.DisplayFor(model => model.strNombrePokemon) ha escapado del combate </h1>
+</div>
+
+<div class="container text-center" style="font-size:20px;">
+
+
+    <div class="container">
+        <img src="@Html.DisplayFor(model => model.strImagen)" alt="Imagen del Pokemon" width="150" height="150" class="vibrate-1" />
+
+    </div>
+
+
+
+</div>
+
+<div class="container" style="font-size:20px; margin-left:45%">
+    <a href="@Url.Action("Index", "Home")">
+        <div class="col-md-4 Bordes-Sombreados-1 bg-warning text-center" style="width: 120px">
+            <label>
+                continuar
+            </label>
+        </div>
+    </a>
+</div>

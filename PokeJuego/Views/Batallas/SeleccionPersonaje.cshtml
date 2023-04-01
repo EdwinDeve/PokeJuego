@@ -12,8 +12,8 @@
 
     <h1>Haz seleccionado a @Html.DisplayFor(model => model.strNombrePokemon)</h1>
 
-    <div class="col-md-3">
-        <img src="@Html.DisplayFor(model => model.strImagen)" alt="Imagen del Pokemon" width="150" height="150" />
+    <div class="col-md-3 ">
+        <img src="@Html.DisplayFor(model => model.strImagen)" alt="Imagen del Pokemon" width="150" height="150" class="Bordes-Sombreados-1"/>
 
     </div>
 
@@ -54,17 +54,16 @@
     </div>
 
     <a href="@Url.Action("SeleccionarContrincante", "Batallas", new {MiPokemon = Model.intPokemon})">
-        <div class="col-md-4 Bordes-Sombreados-1 bg-warning" style="width: 120px">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-success" style="width: 120px">
             <label>
                continuar
             </label>
         </div>
     </a>
 
-    <a href="@Url.Action("Index", "Pokemon")">
-        <div class="col-md-4 Bordes-Sombreados-1 bg-warning" style="width: 240px">
+    <a href="@Url.Action("Index", "Pokemon")" >
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-danger" style="width: 240px">
             <label>
-                &lt;&lt;
                 Volver a la Poquedex
             </label>
         </div>

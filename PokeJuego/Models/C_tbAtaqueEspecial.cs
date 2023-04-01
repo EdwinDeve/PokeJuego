@@ -11,7 +11,8 @@ namespace PokeJuego.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class C_tbAtaqueEspecial
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,6 +23,9 @@ namespace PokeJuego.Models
     
         public int intAtaqueEsp { get; set; }
         public string strNombreAtaqueEsp { get; set; }
+
+
+        [Range(70, 150, ErrorMessage = "El daño del ataque especial no puede ser inferior a 70 ni superior a 150 puntos")]
         public int intDañoEsp { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

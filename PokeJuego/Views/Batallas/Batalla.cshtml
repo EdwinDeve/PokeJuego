@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Resumen";
+}
+<link href="~/Content/Custom_CSS/BasicStyles_Div.css" rel="stylesheet" />
+<link href="~/Content/Custom_CSS/Animaciones.css" rel="stylesheet" />
+
+@*<div class="container text-center" style="font-size: 40px; margin-left:1%">
+
+    <h2></h2>
+</div>*@
+
+<div class="container text-center Bordes-Sombreados-1" style="font-size: 20px">
+
+    @if (ViewBag.MensajeCombate == null)
+    {
+        <label>
+            Turno #@ViewBag.Turno
+        </label>
+    }
+    else
+    {
+        <label>
+            Turno #@ViewBag.Turno
+            <br />  
+            @ViewBag.MensajeCombate
+            <br />
+            @ViewBag.mensajeTurnoJugador
+            <br />
+            @ViewBag.mensajeTurnoEnemigo
+            <br />
+        </label>
+    }
+
+
+</div>
+
+
+<div class="container text-center" style="font-size: 40px; margin-left:20%; margin-top:20px">
+
+    @{
+        var Mipokemon = (PokeJuego.Models.C_tbPokemon)ViewBag.MiPokemon;
+
+        <div class="col-md-4 text-center" style="width:20%">
+            <div >
+                @for (int i = 0; i < ViewBag.MisPS/12; i++)
+                {
+                    <label style="color:red; font-size:15px">
+                        &hearts;
+                    </label>
+                }
+            </div>
+            <img src="@Mipokemon.strImagen" alt="Imagen del Pokemon" width="150" height="150" id="MiPokemon" />
+            <br />
+            @Mipokemon.strNombrePokemon
+            <br />
+            @*@ViewBag.MisPS*@
+
+        </div>
+    }
+
+  
+    <div class="col-md-4  text-center " style="width:20%">
+        <label>
+            VS
+        </label>
+    </div>
+
+    @{
+        var Enemigo = (PokeJuego.Models.C_tbPokemon)ViewBag.Contrincante;
+        <div class="col-md-4 text-center" style="width:20%">
+            <div>
+                @for (int i = 0; i < ViewBag.PSenemigo / 12; i++)
+                {
+                    <label style="color:red; font-size:15px">
+                        &hearts;
+                    </label>
+                }
+            </div>
+            <img src="@Enemigo.strImagen" alt="Imagen del Pokemon" width="150" height="150" id="Enemigo" />
+            <br />
+            @Enemigo.strNombrePokemon
+            <br />
+            @*@ViewBag.PSenemigo*@
+
+        </div>
+    }
+
+</div>
+
+
+
+<div class="container text-center " style="font-size: 20px; margin-left:30%">
+    <a onclick="Atacar();" href="
+       @Url.Action("Batalla", "Batallas", new { 
+            Mipokemon = Mipokemon.intPokemon, 
+            Contrincante =  Enemigo.intPokemon, 
+            turno = ViewBag.Turno,
+            PS =  ViewBag.MisPS,
+            PSEnemigo = ViewBag.PSenemigo,
+            accion = "Atacar",
+
+        })">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-success" style="width:20%">
+            <label>
+                @ViewBag.accion
+            </label>
+        </div>
+    </a>
+
+    
+
+    <a href="
+       @Url.Action("Batalla", "Batallas", new { 
+            Mipokemon = Mipokemon.intPokemon, 
+            Contrincante =  Enemigo.intPokemon, 
+            turno = ViewBag.Turno,
+            PS =  ViewBag.MisPS,
+            PSEnemigo = ViewBag.PSenemigo,
+            accion = "Escapar",
+
+        })">
+        <div class="col-md-4 Bordes-Sombreados-1 text-center text-danger" style="width:20%">
+            <label>
+                Escapar
+            </label>
+        </div>
+    </a>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+    function Atacar() {
+
+        MiPokemon = document.getElementById("MiPokemon");
+        MiPokemon.classList.add("wobble-hor-bottom");
+
+        Enemy = document.getElementById("Enemigo");
+        Enemy.classList.add("bounce-top");
+
+    }
+
+
+</script>
